@@ -1,0 +1,23 @@
+<div class="w-100 d-flex align-items-center justify-content-center">
+    <div class="container d-flex flex-column align-items-center justify-content-center">
+        <h1 class="mb-5">Ecommerce | Log-in</h1>
+        <form style="width: 60%;" class="d-flex flex-column mb-2" action="/api/sessions/login" method="post">
+            <div class="input-group mb-3">
+                <span class="input-group-text">Email</span>
+                <input type="email" name="email" class="form-control" placeholder="Ingrese su email" aria-label="email"
+                    aria-describedby="basic-addon1" required>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Password</span>
+                <input type="password" name="password" class="form-control" placeholder="Ingrese su contraseña"
+                    aria-label="password" aria-describedby="basic-addon1" required>
+            </div>
+            <input class="btn btn-primary" type="submit" value="Iniciar sesión">
+        </form>
+        <div style="width: 60%;" class="row gap-2">
+            <a href="/register" class="btn btn-outline-primary col">Registrate</a>
+            <a href="/api/sessions/github" class="btn btn-outline-primary col">Acceder con Github</a>
+        </div>
+    </div>
+    <img style="height: 100vh; object-fit: cover;" class="w-50" src="/img/banner.jpg" alt="banner-ecommerce">
+</div>
