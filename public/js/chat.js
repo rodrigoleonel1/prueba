@@ -6,7 +6,7 @@ const chatAvatar = document.getElementById('chatAvatar');
 const chatPlaceholder = document.getElementById('chatPlaceholder');
 
 async function getUser() {
-    const res = await fetch(`api/sessions/current`, { method: "GET" });
+    const res = await fetch(`https://prueba-mocha-tau.vercel.app/api/sessions/current`, { method: "GET" });
     const data = await res.json();
     return data.payload;
 }
