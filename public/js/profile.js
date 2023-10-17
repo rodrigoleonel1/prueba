@@ -5,6 +5,7 @@ const panelBtn = document.getElementById('panelBtn');
 async function setButtons() {
     const res = await fetch(`https://prueba-mocha-tau.vercel.app/api/sessions/current`, { method: "GET" });
     const data = await res.json();
+    console.log(data)
     if (data.payload.role == 'admin') {
         changeRoleBtn.style.display = "none"
         panelBtn.style.display = "inline"

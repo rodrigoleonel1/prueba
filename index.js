@@ -1,5 +1,6 @@
 //Dependencies
 import express from 'express';
+import cors from "cors"
 import handlebars from "express-handlebars"
 import session from 'express-session';
 import passport from 'passport';
@@ -26,6 +27,7 @@ import loggerRouter from './routers/logger.router.js';
 
 
 const app = express();
+app.use(cors())
 const PORT = config.PORT || 8080;
 const httpServer = app.listen(PORT, () => logger.info(`Server up at PORT ${PORT}!`));
 const io = new Server(httpServer)
